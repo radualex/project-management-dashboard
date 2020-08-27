@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  font-style: normal;
+  color: #0a0e1c;
+}
+
+.material-icons {
+  user-select: none;
+}
+
+.App {
+  font-family: Muli;
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 50px 44px 0 44px;
+
+  .separator {
+    margin: -50px 0 0 0;
+    border: .5px solid #eeeeee;
+  }
+
+  .content {
+    width: 80%;
+  }
+}
