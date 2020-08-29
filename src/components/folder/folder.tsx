@@ -3,12 +3,14 @@ import "./folder.scss";
 
 interface FolderProps {
   name: string;
+  showNotification?: boolean;
 }
 
-export default function Folder(props) {
+export default function Folder(props: FolderProps) {
   return (
     <div className="folder-wrapper">
-      <span className="material-icons">folder_open</span>
+      {props.showNotification ? <i className="notification"></i> : ""}
+      <i className="material-icons">folder</i>
       <span className="name">{props.name}</span>
     </div>
   );

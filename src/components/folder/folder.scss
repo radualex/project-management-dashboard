@@ -1,0 +1,35 @@
+.folder-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  background-color: #F4F9FF;
+  border-radius: 10px;
+
+  padding: 18px 37px 25px 37px;
+
+  .notification {
+    position: absolute;
+    
+    margin: -25px 0 0 130px;
+
+    background-color: #FF4C9A;
+    border: 6px solid #ffffff;
+    padding: 5px;
+    border-radius: 50px;
+  }
+
+  .material-icons {
+    color: #6294F6;
+    font-size: 64px;
+  }
+
+  .name {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+
+    text-align: center;
+  }
+}
