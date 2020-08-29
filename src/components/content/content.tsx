@@ -10,12 +10,14 @@ export default function Content() {
       <Header />
       <div className="content">
         <div className="left">
-          <div className="recent-folders">
+          <div className="recent-folders-section">
             <h3 className="text">recent folders</h3>
-            <Folder name={"Invoices"} />
-            <Folder name={"Customers"} showNotification={true} />
+            <div className="folders">
+              <Folder name={"Invoices"} />
+              <Folder name={"Customers"} showNotification={true} />
+            </div>
           </div>
-          <div className="projects">
+          <div className="projects-section">
             <h3 className="text">projects</h3>
           </div>
         </div>

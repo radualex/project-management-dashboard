@@ -1,6 +1,8 @@
 .content-wrapper {
   display: flex;
   flex-direction: column;
+
+  margin: 0 0 0 71px;
   
   .content {
     margin: 10px 0 0 0;
@@ -9,6 +11,24 @@
     .left {
       display: flex;
       flex-direction: column;
+
+      .recent-folders-section {
+        .folders {
+          margin: 15px 0 0 0;
+
+          display: grid;
+          grid-template-columns: auto auto;
+          grid-column-gap: 20px;
+        }
+      }
+      
+      .projects-section {
+        margin: 154px 0 0 0;
+      }
+    }
+
+    .right {
+      margin: 0 0 0 71px;
     }
     
   }
