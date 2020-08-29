@@ -3,6 +3,7 @@ import "./content.scss";
 
 import Header from "../header/header";
 import Folder from "../folder/folder";
+import ProjectCard from "../projectCard/projectCard";
 
 export default function Content() {
   return (
@@ -19,6 +20,7 @@ export default function Content() {
           </div>
           <div className="projects-section">
             <h3 className="text">projects</h3>
+            <ProjectCard tasks={47} finishedTasks={26} color={"#985BFF"} />
           </div>
         </div>
         <div className="right">

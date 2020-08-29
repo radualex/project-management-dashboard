@@ -1,0 +1,14 @@
+.progressBar-wrapper {
+  height: 5px;
+  width: 136px;
+	background: #ffffff;
+	border-radius: 25px;
+
+  .progressBar {
+    display: block;
+    height: 100%;
+    border-radius: 3.5px;
+    background-image: linear-gradient(220.77deg, #74A3FF 6.38%, #3755E3 100%);
+    box-shadow: 0px 1px 5px -1px #466CFF;
+  }
+}
