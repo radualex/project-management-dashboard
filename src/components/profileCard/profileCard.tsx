@@ -8,10 +8,9 @@ interface ProfileCardProps {
 export default function ProfileCard(props: ProfileCardProps) {
   return (
     <div className="profileCard-wrapper">
-      {/* Avatar */}
+      <img src="https://source.unsplash.com/jzY0KRJopEI/640x640" alt="avatar" />
       <span className="name">{props.name}</span>
       <span className="material-icons">keyboard_arrow_right</span>
-      {/* Arrow icon */}
     </div>
   );
 }

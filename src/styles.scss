@@ -12,7 +12,7 @@
   font-family: Muli;
   display: flex;
 
-  width: 100vw;
+  width: calc(100vw - 100px);
   height: calc(100vh - 44px);
 
   padding: 44px 50px 0 50px;

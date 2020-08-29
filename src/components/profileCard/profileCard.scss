@@ -1,13 +1,24 @@
+$imgSize: 43px;
+
 .profileCard-wrapper {
   display: flex;
   align-items: center;
 
   margin: 24.5px 0 28px 0;
 
+  img {
+    width: $imgSize;
+    height: $imgSize;
+
+    border-radius: 50px;
+  }
+
   .name {
     font-weight: bold;
     font-size: 16px;
     line-height: 20px;
+
+    margin: 0 39px 0 10px;
   }
 
   .material-icons {
@@ -17,6 +28,12 @@
     border-radius: 50px;
     padding: 4px;
 
-    margin: 0 0 0 39px;
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: #000000;
+    }
   }
 }
