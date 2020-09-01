@@ -17,13 +17,25 @@
           margin: 15px 0 0 0;
 
           display: grid;
-          grid-template-columns: auto auto;
+          grid-template-columns: 157px 157px;
+          grid-template-rows: 147px;
           grid-column-gap: 20px;
         }
       }
       
       .projects-section {
         margin: 154px 0 0 0;
+
+        .text {
+          margin: 0 0 15px 0;
+        }
+
+        .projects-list {
+          display: grid;
+          grid-template-columns:  auto auto;
+          grid-row-gap: 10px;
+          grid-column-gap: 10px;
+        }
       }
     }
 

@@ -5,6 +5,27 @@ import Header from "../header/header";
 import Folder from "../folder/folder";
 import ProjectCard from "../projectCard/projectCard";
 
+let projects = [
+  {
+    title: "Sintex",
+    tasks: 47,
+    finishedTasks: 26,
+    color: "#985BFF"
+  },
+  {
+    title: "Tetrion",
+    tasks: 21,
+    finishedTasks: 7,
+    color: "#FF5B5B"
+  },
+  {
+    title: "Petron",
+    tasks: 16,
+    finishedTasks: 14,
+    color: "#90C335"
+  }
+];
+
 export default function Content() {
   return (
     <div className="content-wrapper">
@@ -20,12 +41,17 @@ export default function Content() {
           </div>
           <div className="projects-section">
             <h3 className="text">projects</h3>
-            <ProjectCard
-              title={"Sintex"}
-              tasks={47}
-              finishedTasks={26}
-              color={"#985BFF"}
-            />
+            <div className="projects-list">
+              {projects.map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  tasks={project.tasks}
+                  finishedTasks={project.finishedTasks}
+                  color={project.color}
+                />
+              ))}
+            </div>
           </div>
         </div>
         <div className="right">
