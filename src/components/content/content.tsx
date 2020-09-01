@@ -20,7 +20,12 @@ export default function Content() {
           </div>
           <div className="projects-section">
             <h3 className="text">projects</h3>
-            <ProjectCard tasks={47} finishedTasks={26} color={"#985BFF"} />
+            <ProjectCard
+              title={"Sintex"}
+              tasks={47}
+              finishedTasks={26}
+              color={"#985BFF"}
+            />
           </div>
         </div>
         <div className="right">

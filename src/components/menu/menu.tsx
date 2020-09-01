@@ -37,6 +37,7 @@ export default function Menu() {
     <div className="menu-wrapper">
       {menuItems.map((menuItem, index) => (
         <MenuItem
+          key={index}
           icon={menuItem.icon}
           name={menuItem.name}
           isActive={active === index}

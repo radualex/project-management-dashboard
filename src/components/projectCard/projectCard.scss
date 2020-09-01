@@ -1,5 +1,51 @@
 .projectCard-wrapper {
   background-color: #F4F9FF;
-  padding: 50px;
+  padding: 25px;
   border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 191px;
+
+  .left-side {
+    margin: 10px 0 0 0;
+    .logo {
+      width: 14px;
+      height: 25px;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 25px;
+  
+      background: #ffffff;
+      border-radius: 22.5px;
+      
+      padding: 10px 15.5px;
+      text-align: center;
+  
+      color: #985BFF;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 23px;
+
+      color: #0A0E1C;
+
+      margin: 0 0 0 10px;
+    }
+  }
+
+  .right-side {
+    margin: 21px 0 0 55px;
+    justify-content: right;
+
+    .tasks {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 15px;
+      color: #0A0E1C;
+    }
+  }
 }

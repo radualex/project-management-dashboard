@@ -11,7 +11,6 @@ export default function SideMenu() {
       <Menu />
       <hr className="separator" />
       <ProfileCard name={"Devin Lee"} />
-      {/* profile card */}
     </div>
   );
 }
