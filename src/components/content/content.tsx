@@ -26,6 +26,17 @@ let projects = [
   }
 ];
 
+let folders = [
+  {
+    name: "Invoices",
+    showNotification: false
+  },
+  {
+    name: "Customers",
+    showNotification: true
+  }
+];
+
 export default function Content() {
   return (
     <div className="content-wrapper">
@@ -35,8 +46,13 @@ export default function Content() {
           <div className="recent-folders-section">
             <h3 className="text">recent folders</h3>
             <div className="folders">
-              <Folder name={"Invoices"} />
-              <Folder name={"Customers"} showNotification={true} />
+              {folders.map((folder, index) => (
+                <Folder
+                  key={index}
+                  name={folder.name}
+                  showNotification={folder.showNotification}
+                />
+              ))}
             </div>
           </div>
           <div className="projects-section">
