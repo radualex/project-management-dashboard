@@ -1,0 +1,59 @@
+.addProjectCard-wrapper {
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  justify-self: center;
+  align-self: center;
+
+  mix-blend-mode: normal;
+  opacity: 0.5;
+
+  width: 223px;
+  height: 123px;
+
+  user-select: none;
+
+  .material-icons {
+    font-size: 34px;
+  }
+  
+  .addProjectCard-text {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+
+    margin: 10px 0 0 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 4px #466CFF;
+
+    .material-icons {
+      color: #466CFF;
+    }
+
+    .addProjectCard-text {
+      color: #466CFF;
+    }
+  }
+
+  &:active {
+    box-shadow: inset 0 0 1px #466CFF;
+
+    .material-icons {
+      transform: scale(0.9);
+    }
+
+    .addProjectCard-text {
+      transform: scale(0.9);
+    }
+  }
+}
