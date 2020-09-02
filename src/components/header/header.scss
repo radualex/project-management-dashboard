@@ -1,0 +1,41 @@
+.header-wrapper {
+  display: flex;
+  margin: 0 0 40px 0;
+  height: 48px;
+
+  .searchBar {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 20px;
+    width: 322px;
+
+    border: 1px solid #EEEEEE;
+    border-radius: 25px;
+
+    .material-icons {
+      font-size: 28px;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+      margin: 0 10px 0 0;
+    }
+
+    .searchBar-content {
+      text-decoration: none;
+      border: none;
+
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+
+      &::placeholder {
+        mix-blend-mode: normal;
+        opacity: 0.5;
+      }
+    }
+  }
+}
