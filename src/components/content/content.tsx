@@ -5,6 +5,7 @@ import Header from "../header/header";
 import Folder from "../folder/folder";
 import ProjectCard from "../projectCard/projectCard";
 import AddProjectCard from "../addProjectCard/addProjectCard";
+import TaskWrapper from "../taskWrapper/taskWrapper";
 
 let folders = [
   {
@@ -91,6 +92,7 @@ export default function Content() {
         </div>
         <div className="right">
           <h3 className="text">your tasks</h3>
+          <TaskWrapper />
         </div>
       </div>
     </div>

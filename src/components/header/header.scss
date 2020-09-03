@@ -1,5 +1,6 @@
 .header-wrapper {
   display: flex;
+  align-items: center;
   margin: 0 0 40px 0;
   height: 48px;
 
@@ -7,6 +8,7 @@
     display: flex;
     align-items: center;
     padding: 10px 0 10px 20px;
+    margin-right: auto;
     width: 322px;
 
     border: 1px solid #EEEEEE;
@@ -36,6 +38,42 @@
         mix-blend-mode: normal;
         opacity: 0.5;
       }
+    }
+  }
+
+  .material-icons-outlined {
+    font-size: 26px;
+    user-select: none;
+
+    &:hover {
+      cursor: pointer;
+      color: #5D86F4;
+    }
+  }
+
+  .notification {
+    margin: 0 50px 0 32px;
+  }
+
+  .date-time {
+    display: flex;
+    flex-flow: row-reverse;
+
+    .time {
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 45px;
+      text-align: right;
+    }
+
+    .date {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      white-space: nowrap;
+
+      position: absolute;
+      top: 90px;
     }
   }
 }
