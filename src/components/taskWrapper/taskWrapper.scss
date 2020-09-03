@@ -1,6 +1,12 @@
 .task-wrapper {
-  width: 357px;
-  height: 418px;
+  width: 317px;
+  height: 378px;
   background: #F4F9FF;
   border-radius: 10px;
+
+  padding: 20px;
+
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 10px;
 }
