@@ -1,4 +1,6 @@
 import React, { useState, ReactNode } from "react";
+import { motion } from "framer-motion";
+
 import "./taskCard.scss";
 
 import RoundCheckBox from "../roundCheckBox/roundCheckBox";
@@ -19,7 +21,11 @@ export default function TaskCard(props: TaskCardProps) {
   };
 
   return (
-    <div className={`taskCard-wrapper ${checked ? "reduce-opacity" : ""}`}>
+    <motion.div
+      animate={{ background: checked ? "rgba(255,255,255, 0.5)" : "#ffffff" }}
+      transition={{ duration: 0.5 }}
+      className={`taskCard-wrapper`}
+    >
       <div className="taskCard-top">
         <RoundCheckBox id={props.id} onChecked={_handleOnChecked} />
         <span className="task">{props.task}</span>
@@ -30,6 +36,6 @@ export default function TaskCard(props: TaskCardProps) {
         </label>
         <div className="slot"> {props.children}</div>
       </div>
-    </div>
+    </motion.div>
   );
 }
