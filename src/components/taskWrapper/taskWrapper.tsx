@@ -11,21 +11,16 @@ const taskCards = [
     task: "Better quality favicon",
     labelColor: "#FF6161",
     labelText: "Design",
-    textTags: [],
-    iconTags: []
+    tags: []
   },
   {
     id: "checkbox-2",
     task: "Social accounts setup",
     labelColor: "#90C335",
     labelText: "Marketing",
-    textTags: [
+    tags: [
       {
-        text: "12:30"
-      }
-    ],
-    iconTags: [
-      {
+        text: "12:30",
         icon: "watch_later"
       }
     ]
@@ -35,13 +30,9 @@ const taskCards = [
     task: "Upgrade plan page",
     labelColor: "#985BFF",
     labelText: "Development",
-    textTags: [
+    tags: [
       {
-        text: "14:30"
-      }
-    ],
-    iconTags: [
-      {
+        text: "14:30",
         icon: "watch_later"
       }
     ]
@@ -51,13 +42,9 @@ const taskCards = [
     task: "Email templates",
     labelColor: "#FF6161",
     labelText: "Design",
-    textTags: [
+    tags: [
       {
-        text: "6"
-      }
-    ],
-    iconTags: [
-      {
+        text: "6",
         icon: "attachment"
       }
     ]
@@ -75,11 +62,11 @@ export default function TaskWrapper() {
           labelColor={taskCard.labelColor}
           labelText={taskCard.labelText}
         >
-          {taskCard.iconTags.map((iconTag, index) => (
-            <IconTag key={index} icon={iconTag.icon} />
-          ))}
-          {taskCard.textTags.map((textTag, index) => (
-            <TextTag key={index} text={textTag.text} />
+          {taskCard.tags.map((tag, index) => (
+            <React.Fragment>
+              <IconTag key={`i-${index}`} icon={tag.icon} />
+              <TextTag key={`t-${index}`} text={tag.text} />
+            </React.Fragment>
           ))}
         </TaskCard>
       ))}
