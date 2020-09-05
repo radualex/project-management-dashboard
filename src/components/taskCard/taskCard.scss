@@ -7,9 +7,34 @@
   box-shadow: 0px 4px 10px -7px #4C6AE6;
   border-radius: 5px;
 
-  input[type='checkbox'] {
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
+  .taskCard-top {
+    display: flex;
+    align-items: center;
+    margin: 0 0 8px 0;
+
+    .task {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+
+      margin: 0 0 0 10px;
+    }
+  }
+
+  .taskCard-bottom {
+    margin: 0 auto 0 36px;
+    display: flex;
+    align-items: center;
+
+    label {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      color: #FFFFFF;
+      background: #FF6161;
+      padding: 5px 9.5px;
+      border-radius: 25px;
+    }
   }
 }
