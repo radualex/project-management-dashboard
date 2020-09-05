@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import moment from "moment";
 
 import "./header.scss";
@@ -6,9 +6,16 @@ import "./header.scss";
 export default function Header() {
   const momentDate = moment(new Date());
 
-  const [currentTime] = useState(momentDate.format("HH:mm"));
+  const [currentTime, setCurrentTime] = useState(momentDate.format("HH:mm"));
   const [dayOfWeek] = useState(momentDate.format("DD"));
   const [month] = useState(momentDate.format("MMMM"));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(moment(new Date()).format("HH:mm"));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="header-wrapper">
