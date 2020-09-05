@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useLiveSearch from "../../hooks/useLiveSearch";
 import "./content.scss";
 
 import Header from "../header/header";
@@ -17,6 +18,12 @@ let folders = [
     showNotification: true
   }
 ];
+
+async function filterFolders(searchContent: string): Promise<any> {
+  return folders.filter((folder) =>
+    folder.name.toLowerCase().includes(searchContent.toLowerCase())
+  );
+}
 
 export default function Content() {
   const [addCard, setAddCard] = useState(true);
@@ -41,6 +48,9 @@ export default function Content() {
     }
   ]);
 
+  const [searchContent, setSearchContent] = useState("");
+  const filteredFolders = useLiveSearch(searchContent, filterFolders);
+
   let _handleOnAddNewCard = () => {
     setProjects([
       ...projects,
@@ -55,21 +65,33 @@ export default function Content() {
     setAddCard(false);
   };
 
+  let _handleOnSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchContent(e.target.value);
+  };
+
   return (
     <div className="content-wrapper">
-      <Header />
+      <Header onSearchChange={_handleOnSearchChange} />
       <div className="content">
         <div className="left">
           <div className="recent-folders-section">
             <h3 className="text">recent folders</h3>
             <div className="folders">
-              {folders.map((folder, index) => (
-                <Folder
-                  key={index}
-                  name={folder.name}
-                  showNotification={folder.showNotification}
-                />
-              ))}
+              {filteredFolders
+                ? filteredFolders.map((folder, index) => (
+                    <Folder
+                      key={index}
+                      name={folder.name}
+                      showNotification={folder.showNotification}
+                    />
+                  ))
+                : folders.map((folder, index) => (
+                    <Folder
+                      key={index}
+                      name={folder.name}
+                      showNotification={folder.showNotification}
+                    />
+                  ))}
             </div>
           </div>
           <div className="projects-section">

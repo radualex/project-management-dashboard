@@ -3,7 +3,11 @@ import moment from "moment";
 
 import "./header.scss";
 
-export default function Header() {
+interface HeaderProps {
+  onSearchChange: any;
+}
+
+export default function Header(props: HeaderProps) {
   const momentDate = moment(new Date());
 
   const [currentTime, setCurrentTime] = useState(momentDate.format("HH:mm"));
@@ -21,7 +25,11 @@ export default function Header() {
     <div className="header-wrapper">
       <div className="searchBar">
         <i className="material-icons">search</i>
-        <input className="searchBar-content" placeholder="Search"></input>
+        <input
+          className="searchBar-content"
+          placeholder="Search"
+          onChange={(e) => props.onSearchChange(e)}
+        ></input>
       </div>
       <i className="material-icons-outlined">mail</i>
       <i className="material-icons-outlined notification">notifications</i>
