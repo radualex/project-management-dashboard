@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, ReactNode } from "react";
 import "./taskCard.scss";
 
 import RoundCheckBox from "../roundCheckBox/roundCheckBox";
@@ -8,6 +8,7 @@ interface TaskCardProps {
   task?: string;
   labelColor?: string;
   labelText: string;
+  children?: ReactNode;
 }
 
 export default function TaskCard(props: TaskCardProps) {
@@ -27,6 +28,7 @@ export default function TaskCard(props: TaskCardProps) {
         <label style={{ background: props.labelColor }}>
           {props.labelText}
         </label>
+        <div className="slot"> {props.children}</div>
       </div>
     </div>
   );

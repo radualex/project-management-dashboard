@@ -21,7 +21,7 @@
   }
 
   .taskCard-bottom {
-    margin: 0 auto 0 36px;
+    margin: 0 0 0 36px;
     display: flex;
     align-items: center;
 
@@ -34,6 +34,15 @@
       background: #FF6161;
       padding: 5px 9.5px;
       border-radius: 25px;
+      margin-right: auto;
+    }
+
+    .slot {
+      display: grid;
+      grid-template-rows: auto;
+      grid-auto-flow: column;
+      grid-column-gap: 5px;
+      align-items: center;
     }
   }
 }
