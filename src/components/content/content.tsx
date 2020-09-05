@@ -78,7 +78,7 @@ export default function Content() {
             <h3 className="text">recent folders</h3>
             <div className="folders">
               {filteredFolders
-                ? filteredFolders.map((folder, index) => (
+                ? filteredFolders.map((folder: any, index: number) => (
                     <Folder
                       key={index}
                       name={folder.name}

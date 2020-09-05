@@ -4,10 +4,10 @@ import useDebounce from "./useDebounce";
 
 export default function useLiveSearch(
   query: string,
-  requestFactory: any,
+  requestFactory: Function,
   delay = 250,
   neglectValue = ""
-) {
+): any {
   const [response, setResponse] = useState(null);
   const debouncedQuery = useDebounce(query, delay);
 
