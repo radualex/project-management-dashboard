@@ -56,14 +56,14 @@ export default function TaskWrapper() {
     <div className="task-wrapper">
       {taskCards.map((taskCard, index) => (
         <TaskCard
-          key={index}
+          key={`task-${index}`}
           id={taskCard.id}
           task={taskCard.task}
           labelColor={taskCard.labelColor}
           labelText={taskCard.labelText}
         >
           {taskCard.tags.map((tag, index) => (
-            <React.Fragment>
+            <React.Fragment key={`taskCardfrag-${index}`}>
               <IconTag key={`i-${index}`} icon={tag.icon} />
               <TextTag key={`t-${index}`} text={tag.text} />
             </React.Fragment>

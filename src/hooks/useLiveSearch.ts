@@ -23,9 +23,7 @@ export default function useLiveSearch(
     } else {
       setResponse(null);
     }
-
-    return () => (isActive = false);
-  }, [debouncedQuery]);
+  }, [neglectValue, requestFactory, debouncedQuery]);
 
   return response;
 }
